@@ -2,26 +2,58 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
 
-## Development server
+This project includes following features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* search department
+* search course
+* selected courses list
+* breaks
+* schedule
 
-## Code scaffolding
+## Search department
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+An input with dropdown. Departments can be found through code(CSCI) or full name.
 
-## Build
+## Search course
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+An input with dropdown.
 
-## Running unit tests
+Once department is selected, courses can be searched. Code(CSCI 571) or full name(Web development) are both accepted.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The detailed sections will not display.
 
-## Running end-to-end tests
+## Selected courses list
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+A row represents a course.
 
-## Further help
+A check box to toggle if a specific courses will be included in the schedule. Once unchecked, this course will be removed from schedule temporarily.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Code and course name.
+
+A remove button to remove the course from schedule permanently.
+
+Once the row is clicked, the detailed sections will show up, including following collumns:
+
+* check box to remove section temporarily
+* section name
+* professor
+* rating
+* week of day and time
+* location
+
+## Breaks
+
+A new button to create a new break.
+
+A break list, an accordion, click any row to edit the detail.
+
+* a check box to disable/enable the break
+* name
+* time
+* length(when input, hours and minutes are separted)
+* repetation(based on week)
+* remove
+
+## Schedules
+
+A list of schedules.
